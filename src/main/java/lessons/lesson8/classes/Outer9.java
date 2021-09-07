@@ -1,9 +1,5 @@
 package lessons.lesson8.classes;
 
-import lesson2021_02_25.classes.Outer.Inner;
-
-import static lesson2021_02_25.classes.Outer9.Inner1.staticMethod;
-
 public class Outer9 {
 
   private int x = 3;
@@ -13,7 +9,7 @@ public class Outer9 {
     protected int number;
   }
 
-  static class Inner1 extends ParentNested implements Comparable<Inner> {
+  static class Inner1 extends ParentNested implements Comparable<BaseOuter.Inner> {
 
     static int value;
     {
@@ -31,13 +27,13 @@ public class Outer9 {
     }
 
     @Override
-    public int compareTo(Inner o) {
+    public int compareTo(BaseOuter.Inner o) {
       return 0;
     }
   }
 
   public void useStatic() {
-    staticMethod();
+    Inner1.staticMethod();
   }
 }
 

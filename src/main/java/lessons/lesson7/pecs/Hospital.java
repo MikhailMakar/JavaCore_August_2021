@@ -1,6 +1,6 @@
 package lessons.lesson7.pecs;
 
-import lesson2021_02_18.enums.Days;
+import lessons.lesson7.enums.Days;
 
 import java.util.ArrayList;
 import java.util.List;
