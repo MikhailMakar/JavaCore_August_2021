@@ -2,6 +2,7 @@ package lessons.lesson01102021.synchronized2;
 
 public class Account {
     private int balance;
+    private final Object lock = new Object();
 
     public Account(int balance) {
         this.balance = balance;
@@ -11,14 +12,18 @@ public class Account {
         return balance;
     }
 
-    public synchronized void deposit(int amount) {
-        int x = balance + amount;
-        balance = x;
+    public void deposit(int amount) {
+        synchronized (lock) {
+            int x = balance + amount;
+            balance = x;
+        }
     }
 
-    public synchronized void withdraw(int amount) {
-        int x = balance - amount;
-        balance = x;
+    public void withdraw(int amount) {
+        synchronized (lock) {
+            int x = balance - amount;
+            balance = x;
+        }
     }
 }
 
@@ -30,7 +35,7 @@ class OperatorDeposit extends Thread {
     }
 
     public void run() {
-        for (int i = 0; i < 5000; i++) {
+        for (int i = 0; i < 500; i++) {
             account.deposit(100);
         }
     }
@@ -44,7 +49,7 @@ class OperatorWithdraw extends Thread {
     }
 
     public void run() {
-        for (int i = 0; i < 5000; i++) {
+        for (int i = 0; i < 500; i++) {
             account.withdraw(50);
         }
     }
