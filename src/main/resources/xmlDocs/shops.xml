@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<shops xmlns="https://www.standart-namespace.com/"
+       xmlns:zoo="https://www.gun-shop.com/"
+       xmlns:cars="https://www.fish-shop.com/">
+    <zoo:shop xmlns="https://www.standart-namespace2.com/"
+              xmlns:zoo2="https://www.gun-shop2.com/"
+              xmlns:cars2="https://www.fish-shop2.com/">
+        <zoo2:></zoo2:>
+        <items>
+            <animal>
+            </animal>
+        </items>
+
+    </zoo:shop>
+<!--    <cars2:></cars2:>-->
+<!--        <zoo2:></zoo2:>-->
+    <cars:shop>
+        <cars>
+            <car>
+            </car>
+        </cars>
+    </cars:shop>
+</shops>

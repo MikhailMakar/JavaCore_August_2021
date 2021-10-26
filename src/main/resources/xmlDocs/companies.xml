@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<companies:company xmlns:companies="http://www.epam.tc.com/note"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://www.epam.tc.com/note companiesXSD.xsd">
+    <name>IT-Heaven</name>
+    <offices>
+        <office floor='1' room="1">
+            <employees>
+                <employee name="John" job="Middle Software Developer"/>
+                <employee name="Ivan" job="Junior Software Developer"/>
+                <employee name="Franklin" job="Junior Software Developer"/>
+            </employees>
+        </office>
+        <office floor="1" room="2">
+            <employees>
+                <employee name="Herald" job="Middle Software Developer" age="22"/>
+                <employee name="Adam" job="Middle Software Developer"/>
+                <employee name="Leroy" job="Junior Software Developer"/>
+            </employees>
+        </office>
+    </offices>
+</companies:company>

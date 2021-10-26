@@ -1,0 +1,11 @@
+<!ELEMENT companies (company)>
+        <!ELEMENT company (name, offices)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT offices (office)+>
+        <!ELEMENT office (employees)>
+        <!ELEMENT employees (employee)+>
+        <!ELEMENT employee (#PCDATA)>
+        <!ATTLIST employee
+                name CDATA #REQUIRED
+                age CDATA
+                job #PCDATA #REQUIRED>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.epam.tc.com/note"
+        xmlns:tns="http://www.epam.tc.com/note">
+
+    <element name="company" >
+        <complexType>
+            <sequence>
+                <element name="name" type="string"/>
+                <element name="offices" type="tns:offices"
+                         minOccurs="0"
+                         maxOccurs="unbounded" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="offices">
+        <sequence>
+            <element name="office" type="tns:office"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+            />
+        </sequence>
+    </complexType>
+
+    <complexType name="office">
+        <sequence>
+            <element name="employees" type="tns:employees"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="floor" type="integer"/>
+        <attribute name="room" type="integer"/>
+    </complexType>
+
+    <complexType name="employees">
+        <sequence>
+            <element name="employee" type="tns:employee"
+                     minOccurs="1"
+                     maxOccurs="unbounded"
+            />
+        </sequence>
+    </complexType>
+
+    <complexType name="employee">
+        <attribute name="name" type="string" use="required"/>
+        <attribute name="job" type="string"/>
+        <attribute name="age" type="integer"/>
+    </complexType>
+</schema>

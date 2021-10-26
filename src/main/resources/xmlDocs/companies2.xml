@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE companies SYSTEM "companyDTD.dtd">
+<companies>
+    <company>
+        <name>IT-Heaven</name>
+        <offices>
+            <office>
+                <employees>
+                    <employee name="Maksim" job="Middle Software Developer" age="23"/>
+                    <employee name="Ivan" job="Junior Software Developer"/>
+                    <employee name="Franklin" job="Junior Software Developer"/>
+                </employees>
+            </office>
+            <office>
+                <employees>
+                    <employee name="Herald" job="Middle Software Developer"/>
+                    <employee name="Adam" job="Middle Software Developer"/>
+                    <employee name="Leroy" job="Junior Software Developer"/>
+                </employees>
+            </office>
+        </offices>
+    </company>
+</companies>
